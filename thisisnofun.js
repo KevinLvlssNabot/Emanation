@@ -1,6 +1,6 @@
 var config = {
 	type: Phaser.AUTO,
-	width: 800,
+	width: 1000,
 	height: 600,
 physics: {
         default: 'arcade',
@@ -20,17 +20,18 @@ scene: {
 var game = new Phaser.Game(config);
 
 function init(){
+	this.load.image('fond','assets/villenuit.png');
 
 }
 
 function preload(){
-
+	this.load.image('fond','assets/villenuit.png');
 }
 
 
 
 function create(){
-
+	this.add.image(500,300,'fond').;
 	}
 
 
