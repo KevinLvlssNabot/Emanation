@@ -39,6 +39,7 @@ body{
   height: auto;
   display: flex;
   flex-flow: row;
+  z-index: -1;
 }
 
 .charaName{
@@ -53,6 +54,13 @@ body{
   height: 40px;
 }
 
+#charaBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 #precedent{
   margin-top: 10%;
 }
@@ -61,4 +69,22 @@ body{
   margin-top: 10%;
   margin-left: auto;
   margin-right: 2%;
+}
+
+#sprite1{
+  background-image: url("assets/inori.png");
+  height: 420px;
+  width: 420px;
+  position: absolute;
+  margin-top: 100px;
+}
+
+#sprite2{
+  background-image: url("assets/hernest.png");
+  height: 420px;
+  width: 420px;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 450px;
+  visibility: hidden;
 }
