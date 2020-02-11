@@ -1,6 +1,5 @@
 
 
-
 $(document).on('keydown', function(e) {
   // e stands for "event" - the event is the keypress
   // e.key means the key that was pressed
