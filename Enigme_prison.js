@@ -3,34 +3,74 @@ https://github.com/pr0mming/TowerHanoi/blob/master/src/Game.js
 
 aide rédaction du code
 */
-var game = game || {};
+var config = {
+	type: Phaser.AUTO,
+	width: 800,
+	height: 600,
+	physics: {
+        default: 'arcade',
+        arcade: {
+            gravity: { y:0 },
+            debug: true
+        }
+    },
+scene: {
+		init: init,
+		preload: preload,
+		create: create,
+		update: update
+	}
+};
 
-game.Hanoi = function(game){};
+var game = new Phaser.game (config);
 
-game.hanoi =
+Game.Hanoi = function(game){};
 
-	function init(pieces, speed) {
-	this.nbrePiece = pieces;
-	this.vitesseReso = speed;
+Game.Hanoi.prototype =
+
+	function init(pieces, timer) {
+	this.nbrePiece = 5;
+	this.speedSolve= timer;
 	},
 
 	function preload() {
+
 		//les spritesheets et images ne sont pas encore présentes
-		this.load.spritesheet('boutton', '/assets/énigme_prison/boutton.png');
-		this.load.spritesheet('tour', '/assets/énigme_prison/tour.png');
-		this.load.spritesheet('pieceBleue', '/assets/énigme_prison/pieceBleue.png');
-		this.load.spritesheet('pieceRouge', '/assets/énigme_prison/pieceRougee.png');
-		this.load.spritesheet('pieceVerte', '/assets/énigme_prison/pieceVerte.png');
-		this.load.spritesheet('pieceJaune', '/assets/énigme_prison/pieceJaune.png');
-		this.load.spritesheet('pieceViolete', '/assets/énigme_prison/pieceViolete.png');
+
+		this.load.spritesheet('boutton', '/assets/énigme_prison/boutton.png', 80, 20);
+		this.load.spritesheet('tour', '/assets/énigme_prison/tour.png', 60, 350);
+		this.load.spritesheet('disque', '/assets/énigme_prison/disques.png', 315, 35);
 	},
+
+ /* 
+ position des disques:
+
+rouge (4) --->			--
+violet (3)--->		   ----
+vert (2)  --->		  ------
+jaune (1) --->		 --------
+cyan (0)  --->		----------
+
+les tours:
+
+	|		|		|
+   (0)	   (1)	   (2)
+*/
 
 	function create(){
+	var x, y;
 
+/* creation d'un boutton permettant de terminer la partie
+	qui vérifiera le nombre de coump et le temps mis par le joueur pour completer l'énigme*/
+
+	this.buttonResoudre = this.add.button(x = 80 ,y = 400,'boutton', this.clickResoudre,this, 0, 1, 2);
+	this.buttonResoudre.name = 'resoudre';
+
+this.game.add.Sprite('tour');
 	},
 
-	function update(){
 
+	function update(){		
 	},
 
 	function render (){
