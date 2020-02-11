@@ -88,3 +88,13 @@ body{
   margin-left: 450px;
   visibility: hidden;
 }
+
+#sprite3{
+  background-image: url("assets/bob.png");
+  height: 420px;
+  width: 420px;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 150px;
+  visibility: hidden;
+}
