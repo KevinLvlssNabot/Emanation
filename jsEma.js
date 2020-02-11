@@ -46,6 +46,7 @@ precedent.on("click", function(){ // Evenement avant condititon.
          charaBox.html("Inori");
          sprite1.css("visibility","visible");
          sprite2.css("visibility","hidden");
+         charaBox.css('visibility','visible');
          frame.html(numDialBox);
   }
 });
