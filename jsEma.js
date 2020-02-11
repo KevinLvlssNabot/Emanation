@@ -27,8 +27,14 @@ suivant.on("click", function(){
         text.html("Nous nous sommes retrouvés, au milieu de cette rue. Il n'y avait que nous, et le reste disparaissait.");
         numDialBox++;
         frame.html(numDialBox);
+      } else if (numDialBox == 1) {
+          charaBox.css('visibility','hidden');
+          sprite2.css('visibility','hidden');
+          text.html("C'est ainsi qu'ils se séparèrent.");
       }
 });
+
+
 
 precedent.on("click", function(){ // Evenement avant condititon.
   if (numDialBox == 1) { // FRAME 2
