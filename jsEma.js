@@ -326,7 +326,7 @@ suivant.on("click", function(){
 
           if (resultat == 1){
 
-              charaBox.css('visibility','visible');
+              charaBox.css('visibility','hidden');
               sprite1.css("visibility","hidden");
               sprite2.css("visibility","hidden");
               text.html("Vous vous rappelez également que vous aviez pour habitude de cacher la clé dans le tonneau à l’entrée. Vous la récupérez et entrez dans le saloon.");
@@ -335,7 +335,7 @@ suivant.on("click", function(){
 
           }
           else if (resultat == 2){
-              charaBox.css('visibility','visible');
+              charaBox.css('visibility','hidden');
               sprite1.css("visibility","hidden");
               sprite2.css("visibility","hidden");
               text.html(" Après réflexion, cela vous paraissait logique de pouvoir passer à travers les murs puisque votre corps n’est plus matériel.");
