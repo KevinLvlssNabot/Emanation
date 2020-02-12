@@ -26,7 +26,6 @@ var game = new Phaser.game (config);
 
 Game.Hanoi = function(game){};
 
-Game.Hanoi.prototype =
 
 	function init(pieces, timer) {
 	this.nbrePiece = 5;
@@ -34,16 +33,16 @@ Game.Hanoi.prototype =
 	},
 
 	function preload() {
-
-		//les spritesheets et images ne sont pas encore présentes
+		//les spritesheets sont chargées
 
 		this.load.spritesheet('boutton', '/assets/énigme_prison/boutton.png', 80, 20);
-		this.load.spritesheet('tour', '/assets/énigme_prison/tour.png', 60, 350);
+		this.load.image('tour', '/assets/énigme_prison/tour.png', 60, 350);
 		this.load.spritesheet('disque', '/assets/énigme_prison/disques.png', 315, 35);
+		this.load.image('background', 'assets/énigme_prison/prison.png');
 	},
 
  /* 
- position des disques:
+ aide mémoire sur l'emlplacement des disques:
 
 rouge (4) --->			--
 violet (3)--->		   ----
@@ -58,15 +57,15 @@ les tours:
 */
 
 	function create(){
-	var x, y;
+this.add.image(400, 300, 'background');
+this.add.image(400, 500, 'tour');
 
+	var x, y;
 /* creation d'un boutton permettant de terminer la partie
 	qui vérifiera le nombre de coump et le temps mis par le joueur pour completer l'énigme*/
 
 	this.buttonResoudre = this.add.button(x = 80 ,y = 400,'boutton', this.clickResoudre,this, 0, 1, 2);
 	this.buttonResoudre.name = 'resoudre';
-
-this.game.add.Sprite('tour');
 	},
 
 
