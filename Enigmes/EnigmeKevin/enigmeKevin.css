@@ -19,7 +19,6 @@
   width: auto;
   height: auto;
   display: flex;
-  flex-flow: row;
   z-index: -1;
 }
 
@@ -28,7 +27,7 @@
   background-color: white;
   opacity: 0.4;
   margin-top: 350px;
-  visibility: visible;
+  visibility: hidden;
   font-family: fantasy;
   font-size: 20px;
   width: 200px;
@@ -37,6 +36,7 @@
 
 #precedent{
   margin-top: 10%;
+	visibility: hidden;
 }
 
 #suivant{
@@ -52,4 +52,67 @@
 	width: 264px;
 	position: absolute;
 	margin-left: 250px;
+	margin-top: 100px;
+	visibility: hidden;
+	cursor: pointer;
+}
+
+#feuille2{
+	background-image: url("Feuille2.png");
+	background-repeat: no-repeat;
+	height: 318px;
+	width: 264px;
+	position: absolute;
+	margin-left: 250px;
+	margin-top: 100px;
+	visibility: hidden;
+	cursor: pointer;
+}
+
+#vie{
+	background-image: url("vie.png");
+	background-repeat: no-repeat;
+	width: 39px;
+	height: 36px;
+	position: absolute;
+}
+
+#eau{
+	background-image: url("eau.png");
+	background-repeat: no-repeat;
+	width: 39px;
+	height: 36px;
+	margin-left: 50px;
+	position: absolute;
+}
+
+#lent{
+	background-image: url("lent.png");
+	background-repeat: no-repeat;
+	width: 50px;
+	height: 36px;
+	margin-left: 100px;
+	position: absolute;
+}
+
+#input{
+	width: 200px;
+	height: 50px;
+	margin: 300px;
+	position: absolute;
+	visibility: hidden;
+}
+
+#valider{
+	width: 100px;
+	height: 20px;
+	margin: 325px;
+	margin-left: 520px;;
+	position: absolute;
+	visibility: hidden;
+}
+
+#tentatives{
+	margin-left: 500px;
+	position: absolute;
 }
