@@ -23,23 +23,27 @@ scene: {
 };
 
 var game = new Phaser.Game (config);
+var coups = 0;
 
 function init() {
 	var pieces;
 	var tour;
 	var timer;
+	var compteur;
 	var disques;
 	var x;
 	var y;
 	var cursor;
 	var jeu;
+	var button;
+	var score_enigme;
 }
 
 function preload(){
 		//les spritesheets sont chargées
 	this.load.image('fond','assets/enigme_prison/prison.png');
 	this.load.image('tour', 'assets/enigme_prison/tour.png');
-	//this.load.spritesheet('boutton', 'assets/enigme_prison/boutton.png');
+	this.load.spritesheet('boutton', 'assets/enigme_prison/boutton.png');
 	this.load.image('disqueB', 'assets/enigme_prison/disque_bleu.png', 315, 35);
 	this.load.image('disqueJ', 'assets/enigme_prison/disque_jaune.png', 315, 35);
 	this.load.image('disqueV', 'assets/enigme_prison/disque_vert.png', 315, 35);
@@ -63,28 +67,27 @@ les tours:
 */
 
 function create(){
-this.add.image(400, 300,'fond');
-this.add.image(125, 460, 'tour').setScale(0.80);
-this.add.image(400, 460, 'tour').setScale(0.80);
-this.add.image(675, 460, 'tour').setScale(0.80);
-this.add.sprite(140, 585, 'disqueB').setScale(0.850);
-this.add.sprite(138, 555, 'disqueJ').setScale(0.90);
-this.add.sprite(136, 523, 'disqueV').setScale(0.90);
-this.add.sprite(134, 490, 'disqueVio').setScale(0.90);
-this.add.sprite(132, 459, 'disqueR').setScale(0.90);
+
+//mise en place des images
+	this.add.image(400, 300,'fond');
+	this.add.image(125, 460, 'tour').setScale(0.80);
+	this.add.image(400, 460, 'tour').setScale(0.80);
+	this.add.image(675, 460, 'tour').setScale(0.80);
+	this.add.sprite(140, 585, 'disqueB').setScale(0.850);
+	this.add.sprite(138, 555, 'disqueJ').setScale(0.90);
+	this.add.sprite(136, 523, 'disqueV').setScale(0.90);
+	this.add.sprite(134, 490, 'disqueVio').setScale(0.90);
+	this.add.sprite(132, 459, 'disqueR').setScale(0.90);
 
 
+/* creation d'un boutton permettant de terminer la partie
+	qui vérifiera le nombre de coump et le temps mis par le joueur pour completer l'énigme */
 
-creation d'un boutton permettant de terminer la partie
-	qui vérifiera le nombre de coump et le temps mis par le joueur pour completer l'énigme*/
-
-	this.buttonResoudre = this.add.button(x = 80 ,y = 400,'boutton', this.clickResoudre,this, 0, 1, 2);
-	this.buttonResoudre.name = 'resoudre';
 };
 
 
 	function update(){		
-	};
+	}
 
 	function onDragStart(){
 
