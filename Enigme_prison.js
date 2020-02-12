@@ -7,10 +7,10 @@ var config = {
 	type: Phaser.AUTO,
 	width: 800,
 	height: 600,
-	physics: {
+physics: {
         default: 'arcade',
         arcade: {
-            gravity: { y:0 },
+            gravity: { y: 0 },
             debug: true
         }
     },
@@ -22,24 +22,30 @@ scene: {
 	}
 };
 
-var game = new Phaser.game (config);
+var game = new Phaser.Game (config);
 
-Game.Hanoi = function(game){};
+function init() {
+	var pieces;
+	var tour;
+	var timer;
+	var disques;
+	var x;
+	var y;
+	var cursor;
+	var jeu;
+}
 
-
-	function init(pieces, timer) {
-	this.nbrePiece = 5;
-	this.speedSolve= timer;
-	},
-
-	function preload() {
+function preload(){
 		//les spritesheets sont chargées
-
-		this.load.spritesheet('boutton', '/assets/énigme_prison/boutton.png', 80, 20);
-		this.load.image('tour', '/assets/énigme_prison/tour.png', 60, 350);
-		this.load.spritesheet('disque', '/assets/énigme_prison/disques.png', 315, 35);
-		this.load.image('background', 'assets/énigme_prison/prison.png');
-	},
+	this.load.image('fond','assets/enigme_prison/prison.png');
+	this.load.image('tour', 'assets/enigme_prison/tour.png');
+	//this.load.spritesheet('boutton', 'assets/enigme_prison/boutton.png');
+	this.load.image('disqueB', 'assets/enigme_prison/disque_bleu.png', 315, 35);
+	this.load.image('disqueJ', 'assets/enigme_prison/disque_jaune.png', 315, 35);
+	this.load.image('disqueV', 'assets/enigme_prison/disque_vert.png', 315, 35);
+	this.load.image('disqueVio', 'assets/enigme_prison/disque_violet.png', 315, 35);
+	this.load.image('disqueR', 'assets/enigme_prison/disque_rouge.png', 315, 35);
+	};
 
  /* 
  aide mémoire sur l'emlplacement des disques:
@@ -56,44 +62,43 @@ les tours:
    (0)	   (1)	   (2)
 */
 
-	function create(){
-this.add.image(400, 300, 'background');
-this.add.image(400, 500, 'tour');
+function create(){
+this.add.image(400, 300,'fond');
+this.add.image(125, 460, 'tour').setScale(0.80);
+this.add.image(400, 460, 'tour').setScale(0.80);
+this.add.image(675, 460, 'tour').setScale(0.80);
+this.add.sprite(140, 585, 'disqueB').setScale(0.850);
+this.add.sprite(138, 555, 'disqueJ').setScale(0.90);
+this.add.sprite(136, 523, 'disqueV').setScale(0.90);
+this.add.sprite(134, 490, 'disqueVio').setScale(0.90);
+this.add.sprite(132, 459, 'disqueR').setScale(0.90);
 
-	var x, y;
-/* creation d'un boutton permettant de terminer la partie
+
+
+creation d'un boutton permettant de terminer la partie
 	qui vérifiera le nombre de coump et le temps mis par le joueur pour completer l'énigme*/
 
 	this.buttonResoudre = this.add.button(x = 80 ,y = 400,'boutton', this.clickResoudre,this, 0, 1, 2);
 	this.buttonResoudre.name = 'resoudre';
-	},
+};
 
 
 	function update(){		
-	},
-
-	function render (){
-
-	},
+	};
 
 	function onDragStart(){
 
-	},
+	}
 
 	function onDragStop (){
 
-	},
+	}
 
 	function validateHanoi (){
 
-	},
+	}
 
 	function clickSolve(){
 
-	},
-
-	function getInstruction (){
-
-	},
-
+	}
 
