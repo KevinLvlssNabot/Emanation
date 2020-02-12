@@ -26,30 +26,29 @@ var game = new Phaser.Game (config);
 var coups = 0;
 
 function init() {
-	var pieces;
 	var tour;
 	var timer;
-	var compteur;
+	var compteur ;
 	var disques;
-	var x;
-	var y;
 	var cursor;
 	var jeu;
 	var button;
 	var score_enigme;
+	var victoire 
+	var defaite
 }
 
 function preload(){
 		//les spritesheets sont chargées
 	this.load.image('fond','assets/enigme_prison/prison.png');
 	this.load.image('tour', 'assets/enigme_prison/tour.png');
-	this.load.spritesheet('boutton', 'assets/enigme_prison/boutton.png');
+	//this.load.spritesheet('boutton', 'assets/enigme_prison/boutton.png');
 	this.load.image('disqueB', 'assets/enigme_prison/disque_bleu.png', 315, 35);
 	this.load.image('disqueJ', 'assets/enigme_prison/disque_jaune.png', 315, 35);
 	this.load.image('disqueV', 'assets/enigme_prison/disque_vert.png', 315, 35);
 	this.load.image('disqueVio', 'assets/enigme_prison/disque_violet.png', 315, 35);
-	this.load.image('disqueR', 'assets/enigme_prison/disque_rouge.png', 315, 35);
-	};
+	this.load.image('disqueR', 'assets/enigme_prison/disque_rouge.png');
+	}
 
  /* 
  aide mémoire sur l'emlplacement des disques:
@@ -68,33 +67,36 @@ les tours:
 
 function create(){
 
+
 //mise en place des images
+
 	this.add.image(400, 300,'fond');
 	this.add.image(125, 460, 'tour').setScale(0.80);
 	this.add.image(400, 460, 'tour').setScale(0.80);
 	this.add.image(675, 460, 'tour').setScale(0.80);
-	this.add.sprite(140, 585, 'disqueB').setScale(0.850);
-	this.add.sprite(138, 555, 'disqueJ').setScale(0.90);
-	this.add.sprite(136, 523, 'disqueV').setScale(0.90);
-	this.add.sprite(134, 490, 'disqueVio').setScale(0.90);
-	this.add.sprite(132, 459, 'disqueR').setScale(0.90);
+	//var discB = this.add.sprite(140, 585, 'disqueB').setScale(0.850)
+	//var discJ = this.add.sprite(138, 555, 'disqueJ').setScale(0.90)
+	//var discV = this.add.sprite(136, 523, 'disqueV').setScale(0.90)
+	//var discVio = this.add.sprite(134, 490, 'disqueVio').setScale(0.90)
+	this.add.sprite(132, 459, 'disqueR').setScale(0.90)
+	discR.setInteractive(true);
+	this.input.on('pointerdown', this.startDrag, this);
 
+}
 
-/* creation d'un boutton permettant de terminer la partie
-	qui vérifiera le nombre de coump et le temps mis par le joueur pour completer l'énigme */
+function startDrag(pointer,target){
+	this.input.on('pointerdown', this.startDrag, this);
+	this.dragObj = target[0];
+	this.input.on('pointermove', this.doDrag, this);
+}
 
-};
+function doDrag(pointer){
+	this.dragObj.x = pointer.x;
+	this.dragObj.y = pointer.y;
+}
 
 
 	function update(){		
-	}
-
-	function onDragStart(){
-
-	}
-
-	function onDragStop (){
-
 	}
 
 	function validateHanoi (){
