@@ -44,6 +44,7 @@ suivant.on('click', function(){
       next.css('visibility','visible');
       feuille1.css('visibility','hidden');
       dialBox.css("visibility","hidden");
+      suivant.css('visibility','hidden');
     }
     epreuve++;
     tentatives.html(numTentatives);
