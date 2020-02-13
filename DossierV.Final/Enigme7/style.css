@@ -1,0 +1,147 @@
+.blocPrincipal{
+	padding:auto;
+	margin: auto;
+	width:800px;
+	height:600px;
+	border: solid 1px black;
+	background-image: url("images/bank.png");
+}
+
+/*-------------------------ELEMENT CLICKABLE-----------------*/
+
+#affiche img.wanted1{
+
+	width: 55px;
+	height: 74px;
+	padding-top: 10%;
+	margin-left: 5%;
+}
+
+#affiche img.wanted4{
+	width: 55px;
+	height: 74px;
+	padding-top: 10%;
+	margin-left: 75%;
+}
+
+/*----------REGISTRE-------*/
+
+
+.registre{
+	width:120px; 
+	height:30px;
+	padding-top: 25%;
+	margin-left: 42%;
+}
+
+#affiche2 img.wanted2{
+	width: 75px;
+	height: 94px;
+	padding-top:5%;
+	margin-left: 35%; 
+	margin-right: 15%;
+}
+
+#affiche2 img.wanted3{
+	width: 75px;
+	height: 94px;
+}
+
+/*-------------------------ELEMENT CLICKé-----------------*/
+ 
+
+.wanted1Zoom{
+	width: 300px;
+	height: 420px;
+	position: absolute;
+	top: 15%;
+	left: 40%;
+	border: solid white 5px;
+	visibility: hidden;
+}
+
+.wanted2Zoom{
+	width: 300px;
+	height: 420px;
+	position: absolute;
+	top: 15%;
+	left: 40%;
+	border: solid white 5px;
+	visibility: hidden;
+}
+
+.wanted3Zoom{
+	width: 300px;
+	height: 420px;
+	position: absolute;
+	top: 15%;
+	left: 40%;
+	border: solid white 5px;
+	visibility: hidden;
+}
+
+.wanted4Zoom{
+	width: 300px;
+	height: 420px;
+	position: absolute;
+	top: 15%;
+	left: 40%;
+	border: solid white 5px;
+	visibility: hidden;
+}
+
+.registreZoom1872{
+	width: 683px;
+	height: 385px;
+	position: absolute;
+	top: 10%;
+	left: 35%;
+	visibility: hidden;
+}
+
+.registreZoom1873{
+	width: 683px;
+	height: 385px;
+	position: absolute;
+	top: 10%;
+	left: 35%;
+	visibility: hidden;
+}
+
+.registreZoom1874{
+	width: 683px;
+	height: 385px;
+	position: absolute;
+	top: 10%;
+	left: 35%;
+	visibility: hidden;
+}
+
+.droite{
+	width: 40px;
+	height: 20px;
+	position: absolute;
+	top:5%;
+	left: 65%;
+	visibility: hidden;
+}
+
+.gauche{
+	width: 40px;
+	height: 20px;
+	position: absolute;
+	top:5%;
+	left: 33%;
+	visibility: hidden;
+}
+
+
+.close{
+	font-size: 50px;
+	position: absolute;
+    color: #f00;
+    top:1%;
+    left:50%;
+    cursor: pointer;
+    visibility: hidden;
+}
