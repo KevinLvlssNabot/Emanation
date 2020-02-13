@@ -1,0 +1,18 @@
+#corps{
+	height: 600px;
+	width: 800px;
+	border: double black 1px;
+	margin: auto;
+	background-image: url("assets/menuprincipal.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#next{
+	font-size: 50px;
+	color: white;
+	margin-top: 310px;
+	margin-left: 240px;
+	opacity: 0;
+	cursor: pointer;
+}
