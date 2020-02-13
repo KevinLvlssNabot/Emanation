@@ -10,6 +10,26 @@ body{
   margin: auto;
 }
 
+#buttonVerif{
+  border: 2px solid black;
+  background-image: url(assets/enigme_prison/boutton.png);
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 20px;
+  position: absolute;
+  left: 950px;
+  top: 80px;
+}
+#movesNum{
+  color: #ffff;
+}
+#moves{
+  position: absolute;
+  margin:auto;
+  width:150px;
+  height: 50px;
+}
+
 #tour1{
   background-image: url(assets/enigme_prison/tour.png);
   width:60px;
@@ -18,10 +38,16 @@ body{
   margin-right: 100px;
   margin-left: 100px;
   position: absolute;
-  left:25px ;
+  left: 880px;
   top:286px ;
 }
 
+.sucessMessage{
+visibility: hidden;
+}
+.infoMessage{
+visibility: hidden;
+}
 
 #tour2{
   background-image: url(assets/enigme_prison/tour.png);
@@ -31,7 +57,7 @@ body{
   margin-right: 100px;
   margin-left: 100px;
   position: absolute;
-  left:350px ;
+  left:1180px ;
   top:286px ;
 }
 
@@ -43,13 +69,13 @@ body{
   margin-right: 100px;
   margin-left: 100px;
   position: absolute;
-  left:600px ;
+  left:1450px ;
   top:286px ;
 }
 
 .vide{
   position: relative;
-  right:122px;
+  right:120px;
   top:170px;
   width: 316px;
   height:36px;
