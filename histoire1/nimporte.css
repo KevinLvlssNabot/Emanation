@@ -1,0 +1,73 @@
+body{
+  width: 800px;
+  height: 600px;
+  border-style: solid;
+  border-width: thin;
+  margin: auto;
+}
+
+.corpsFond9{
+  background-image: url("assets/chambre.png");
+  background-size: 800px 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  margin: auto;
+}
+
+.dialBox{
+  border: 5px double black;
+  padding-top: 50px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  background-color: white;
+  opacity: 0.6;
+  visibility: visible;
+  font-family: fantasy;
+  font-size: 20px;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-flow: row;
+  z-index: -1;
+}
+
+.charaName{
+  border: 5px double black;
+  background-color: white;
+  opacity: 0.6;
+  margin-top: 350px;
+  visibility: hidden;
+  font-family: fantasy;
+  font-size: 20px;
+  width: 200px;
+  height: 40px;
+}
+
+#charaBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+
+#precedent{
+  margin-top: 10%;
+}
+
+#suivant{
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: 2%;
+}
+
+#sprite1{
+  background-image: url("assets/inori.png");
+  height: 420px;
+  width: 420px;
+  position: absolute;
+  margin-top: 100px;
+  visibility: hidden;
+}

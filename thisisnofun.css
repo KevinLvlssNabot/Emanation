@@ -32,7 +32,7 @@ body{
   margin: auto;
 }
 .corpsFond4{
-  background-image: url("assets/saloonint.jpg");
+  background-image: url("assets/salooninté.png");
   background-size: 800px 600px;
   background-repeat: no-repeat;
   background-position: center;
@@ -71,6 +71,16 @@ body{
   cursor: pointer;
   margin: auto;
 }
+
+.corpsFond9{
+  background-image: url("assets/chambre.png");
+  background-size: 800px 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  margin: auto;
+}
+
 .corpsFondDessin{
   background-image: url("assets/dessin.jpg");
   background-size: 800px 600px;
