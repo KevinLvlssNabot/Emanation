@@ -16,13 +16,77 @@ body{
 }
 
 .corpsFond2{
-  background-image: url("assets/villenuit.png");
+  background-image: url("assets/vue.jpg");
   background-size: 800px 600px;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
   margin: auto;
 }
+.corpsFond3{
+  background-image: url("assets/saloonext.jpg");
+  background-size: 800px 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  margin: auto;
+}
+.corpsFond4{
+  background-image: url("assets/saloonint.jpg");
+  background-size: 800px 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  margin: auto;
+}
+.corpsFond5{
+  background-image: url("assets/ranch.jpg");
+  background-size: 800px 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  margin: auto;
+}
+.corpsFond6{
+  background-image: url("assets/eglise.jpg");
+  background-size: 800px 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  margin: auto;
+}
+.corpsFond7{
+  background-image: url("assets/banque.jpg");
+  background-size: 800px 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  margin: auto;
+}
+.corpsFond8{
+  background-image: url("assets/prison.jpg");
+  background-size: 800px 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  margin: auto;
+}
+.corpsFondDessin{
+  background-image: url("assets/dessin.jpg");
+  background-size: 800px 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  margin: auto;
+}
+.corpsFondBlanc{
+  background-size: 800px 600px;
+  background-position: center;
+  cursor: pointer;
+  margin: auto;
+  background-color:white;
+}
+
 
 .dialBox{
   border: 5px double black;
@@ -31,7 +95,7 @@ body{
   padding-bottom: 10px;
   margin-top: 10px;
   background-color: white;
-  opacity: 0.4;
+  opacity: 0.6;
   visibility: visible;
   font-family: fantasy;
   font-size: 20px;
@@ -45,9 +109,9 @@ body{
 .charaName{
   border: 5px double black;
   background-color: white;
-  opacity: 0.4;
+  opacity: 0.6;
   margin-top: 350px;
-  visibility: visible;
+  visibility: hidden;
   font-family: fantasy;
   font-size: 20px;
   width: 200px;
@@ -58,6 +122,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  visibility: hidden;
 }
 
 
@@ -77,7 +142,7 @@ body{
   width: 420px;
   position: absolute;
   margin-top: 100px;
-  background-repeat: no-repeat;
+  visibility: hidden;
 }
 
 #sprite2{
@@ -88,41 +153,15 @@ body{
   margin-top: 100px;
   margin-left: 450px;
   visibility: hidden;
-  background-repeat: no-repeat;
 }
 
 #sprite3{
-  background-image: url("assets/bob.png");
+  background-image: url("assets/bob.jpg");
+  background-repeat: no-repeat;
   height: 420px;
   width: 420px;
   position: absolute;
   margin-top: 100px;
   margin-left: 150px;
-  visibility: hidden;
-}
-
-#HG{ /*Tests */
-  background-image: url("assets/yinHG.png");
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  display: none;
-}
-
-.block {
-  position:absolute;
-  width:50px;
-  height:50px;
-	margin: none;
-  visibility: hidden;
-}
-
-.bomb {
-  position:absolute;
-  background-color:red;
-  left:250px;
-	top: 700px;
-  width:40px;
-  height:40px;
   visibility: hidden;
 }
