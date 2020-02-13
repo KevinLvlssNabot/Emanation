@@ -16,8 +16,13 @@ let numTentatives = 10
 let valider = $('#valider')
 let tentatives = $('#tentatives')
 let input = $('#input')
-let nbreVictoire = 0
+ // let nbreVictoire = 0 // PENSER LA LE METTRE SUR LA PREMIERE ENIGME
+let chrono = $('#chrono')
+let numChrono = 120
+let decompte = null
+let next = $('#next')
 
+// $.session.get('nbreVictoire');
 
 tentatives.html(numTentatives);
 
@@ -33,6 +38,14 @@ suivant.on('click', function(){
       dialBox.css("visibility","visible");
       valider.css("visibility","visible");
       input.css('visibility','visible');
+      tentatives.css('visibility','visible');
+      chrono.css('visibility','visible');
+      decompte = setInterval(timer, 1000);
+    } else if (epreuve == 3) {
+      next.css('visibility','visible');
+      feuille1.css('visibility','hidden');
+      dialBox.css("visibility","hidden");
+      suivant.css('visibility','hidden');
     }
     epreuve++;
     tentatives.html(numTentatives);
@@ -62,8 +75,9 @@ vie.on('click',function(){
   reussiteEpreuve = reussiteEpreuve + 1;
   vie.css('visibility','hidden');
   dialBox.css('visibility','visible');
+  suivant.css('visibility','hidden');
   if (reussiteEpreuve == 3) {
-    text.html("De la vie, de l'eau, un escargot lent.. Qu'est ce que cela signifie ?")
+    text.html("De la vie, de l'eau, un escargot lent.. Qu'est ce que cela signifie ?");
   }
 });
 
@@ -72,8 +86,9 @@ eau.on('click',function(){
   reussiteEpreuve = reussiteEpreuve + 1;
   eau.css('visibility','hidden');
   dialBox.css('visibility','visible');
+  suivant.css('visibility','hidden');
   if (reussiteEpreuve == 3) {
-    text.html("De la vie, de l'eau, un escargot lent.. Qu'est ce que cela signifie ?")
+    text.html("De la vie, de l'eau, un escargot lent.. Qu'est ce que cela signifie ?");
   }
 });
 
@@ -81,9 +96,11 @@ lent.on('click',function(){
   text.html("Un escargot ? Avec cette chaleur, surprenant. Il a l'air plutôt lent, très lent.");
   lent.css('visibility','hidden');
   dialBox.css('visibility','visible');
+  suivant.css('visibility','hidden');
   reussiteEpreuve = reussiteEpreuve + 1;
   if (reussiteEpreuve == 3) {
     text.html("Un coeur, une goutte d'eau, un escargot.. Qu'est ce que cela signifie ?")
+    suivant.css('visibility','visible');
   }
 });
 
@@ -92,8 +109,11 @@ valider.on('click',function(){
     if (reponse === violent)
     {
     window.alert("Bien joué, vous avez retrouver le mot effacé.");
-    nbreVictoire = nbreVictoire++;
+  //  nbreVictoire = nbreVictoire++;
     text.html("Un souvenir vous revient, vous apercevez votre fille, sur le dos d'un poney, ses joues sont couvertes d'hématomes mais un sublime sourire décore son visage. Cependant, cela ne vous permet de répondre à toutes vos questions et vous décidez de chercher d'autres indices vers l'église.");
+    valider.css("visibility","hidden");
+    input.css('visibility','hidden');
+    clearInterval(decompte);
   } else {
     window.alert("Ce n'est pas cela.");
     numTentatives = numTentatives- 1;
@@ -103,6 +123,23 @@ valider.on('click',function(){
         valider.css("visibility","hidden");
         input.css('visibility','hidden');
         text.html("Ce ranch ne vous dit rien, vous n'êtes peut-être même jamais venu ici. Vous décidez de chercher des réponses vers l'église.");
+        clearInterval(decompte);
       }
   }
 });
+
+
+function timer(){
+	numChrono --, chrono.html(numChrono);
+	if (numChrono <= 0){
+		clearInterval(decompte);
+		window.alert("Vous avez perdu.");
+		chrono.css("visibility","hidden");
+    valider.css("visibility","hidden");
+    input.css('visibility','hidden');
+    text.html("Ce ranch ne vous dit rien, vous n'êtes peut-être même jamais venu ici. Vous décidez de chercher des réponses vers l'église.");
+	}
+}
+
+
+$.session.set('nbreVictoire','nbreVictoire');
