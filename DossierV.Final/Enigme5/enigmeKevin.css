@@ -1,0 +1,136 @@
+#corps{
+	height: 600px;
+	width: 800px;
+	border: double black 1px;
+	margin: auto;
+}
+
+.dialBox{
+  border: 5px double black;
+  padding-top: 50px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  background-color: white;
+  opacity: 0.4;
+  visibility: visible;
+  font-family: fantasy;
+  font-size: 20px;
+  width: auto;
+  height: auto;
+  display: flex;
+  z-index: -1;
+}
+
+.charaName{
+  border: 5px double black;
+  background-color: white;
+  opacity: 0.4;
+  margin-top: 350px;
+  visibility: hidden;
+  font-family: fantasy;
+  font-size: 20px;
+  width: 200px;
+  height: 40px;
+}
+
+#precedent{
+  margin-top: 10%;
+	visibility: hidden;
+}
+
+#suivant{
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: 2%;
+}
+
+#feuille1{
+	background-image: url("../assets/Feuille1.png");
+	background-repeat: no-repeat;
+	height: 318px;
+	width: 264px;
+	position: absolute;
+	margin-left: 250px;
+	margin-top: 100px;
+	visibility: hidden;
+	cursor: pointer;
+}
+
+#feuille2{
+	background-image: url("../assets/Feuille2.png");
+	background-repeat: no-repeat;
+	height: 318px;
+	width: 264px;
+	position: absolute;
+	margin-left: 250px;
+	margin-top: 100px;
+	visibility: hidden;
+	cursor: pointer;
+}
+
+#vie{
+	background-image: url("../assets/vie.png");
+	background-repeat: no-repeat;
+	width: 39px;
+	height: 36px;
+	position: absolute;
+}
+
+#eau{
+	background-image: url("../assets/eau.png");
+	background-repeat: no-repeat;
+	width: 39px;
+	height: 36px;
+	margin-left: 50px;
+	position: absolute;
+}
+
+#lent{
+	background-image: url("../assets/lent.png");
+	background-repeat: no-repeat;
+	width: 50px;
+	height: 36px;
+	margin-left: 100px;
+	position: absolute;
+}
+
+#input{
+	width: 200px;
+	height: 50px;
+	margin: 300px;
+	position: absolute;
+	visibility: hidden;
+}
+
+#valider{
+	width: 100px;
+	height: 20px;
+	margin: 325px;
+	margin-left: 520px;;
+	position: absolute;
+	visibility: hidden;
+}
+
+#tentatives{
+	margin-left: 500px;
+	position: absolute;
+	visibility: hidden;
+}
+
+#chrono{
+	margin-left: 600px;
+	position: absolute;
+	visibility: hidden;
+}
+
+#next{
+	position: absolute;
+	margin-top: 525px;
+  margin-left: 700px;
+	height: 50px;
+	width: 100px;
+	font-size: 10px;
+	font-style: italic;
+	visibility: hidden;
+}
