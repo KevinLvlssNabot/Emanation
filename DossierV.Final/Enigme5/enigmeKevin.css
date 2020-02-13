@@ -46,7 +46,7 @@
 }
 
 #feuille1{
-	background-image: url("Feuille1.png");
+	background-image: url("../assets/Feuille1.png");
 	background-repeat: no-repeat;
 	height: 318px;
 	width: 264px;
@@ -58,7 +58,7 @@
 }
 
 #feuille2{
-	background-image: url("Feuille2.png");
+	background-image: url("../assets/Feuille2.png");
 	background-repeat: no-repeat;
 	height: 318px;
 	width: 264px;
@@ -70,7 +70,7 @@
 }
 
 #vie{
-	background-image: url("vie.png");
+	background-image: url("../assets/vie.png");
 	background-repeat: no-repeat;
 	width: 39px;
 	height: 36px;
@@ -78,7 +78,7 @@
 }
 
 #eau{
-	background-image: url("eau.png");
+	background-image: url("../assets/eau.png");
 	background-repeat: no-repeat;
 	width: 39px;
 	height: 36px;
@@ -87,7 +87,7 @@
 }
 
 #lent{
-	background-image: url("lent.png");
+	background-image: url("../assets/lent.png");
 	background-repeat: no-repeat;
 	width: 50px;
 	height: 36px;
@@ -115,4 +115,21 @@
 #tentatives{
 	margin-left: 500px;
 	position: absolute;
+	visibility: hidden;
+}
+
+#chrono{
+	margin-left: 600px;
+	position: absolute;
+	visibility: hidden;
+}
+
+#next{
+	position: absolute;
+	margin: 150px;
+	height: 200px;
+	width: 500px;
+	font-size: 100px;
+	font-style: italic;
+	visibility: hidden;
 }
