@@ -16,12 +16,13 @@ let numTentatives = 10
 let valider = $('#valider')
 let tentatives = $('#tentatives')
 let input = $('#input')
-let nbreVictoire = 0
+ // let nbreVictoire = 0 // PENSER LA LE METTRE SUR LA PREMIERE ENIGME
 let chrono = $('#chrono')
 let numChrono = 120
 let decompte = null
 let next = $('#next')
 
+// $.session.get('nbreVictoire');
 
 tentatives.html(numTentatives);
 
@@ -108,7 +109,7 @@ valider.on('click',function(){
     if (reponse === violent)
     {
     window.alert("Bien joué, vous avez retrouver le mot effacé.");
-    nbreVictoire = nbreVictoire++;
+  //  nbreVictoire = nbreVictoire++;
     text.html("Un souvenir vous revient, vous apercevez votre fille, sur le dos d'un poney, ses joues sont couvertes d'hématomes mais un sublime sourire décore son visage. Cependant, cela ne vous permet de répondre à toutes vos questions et vous décidez de chercher d'autres indices vers l'église.");
     valider.css("visibility","hidden");
     input.css('visibility','hidden');
@@ -139,3 +140,6 @@ function timer(){
     text.html("Ce ranch ne vous dit rien, vous n'êtes peut-être même jamais venu ici. Vous décidez de chercher des réponses vers l'église.");
 	}
 }
+
+
+$.session.set('nbreVictoire','nbreVictoire');
