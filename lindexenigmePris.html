@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="thisisnofun.css">
-			<script src="http://code.jquery.com/jquery-3.3.1.js" ></script>
+		<link rel="stylesheet" type="text/css" href="enigmePrison.css">
 			<meta charset="UTF-8/">
-		<title> Emanation
-		</title>
+		<title>Emanation</title>
 	</head>
+
 	<body id="corps">
+		<div id="grille"> 
+			<div id="tour1"> 
+				<div class="vide">	<div id="discR" draggable="true">	</div>	</div> 
+				<div class="vide">	<div id="discVio" draggable="true">	</div>	</div> 
+				<div class="vide">	<div id="discV" draggable="true">	</div>	</div> 
+				<div class="vide">	<div id="discJ" draggable="true">	</div>	</div> 
+				<div class="vide">	<div id="discB" draggable="true">	</div>	</div>
+			</div>			
+			<div id="tour2"> 
+				<div class="vide"></div> 
+				<div class="vide"></div> 
+				<div class="vide"></div> 
+				<div class="vide"></div> 
+				<div class="vide"></div>
+			</div>
+			<div id="tour3"> 
+				<div class="vide"></div> 
+				<div class="vide"></div> 
+				<div class="vide"></div> 
+				<div class="vide"></div> 
+				<div class="vide"></div>
+			</div>
+		</div>
 
 		<script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
 		<script src="http://code.jquery.com/jquery-3.3.1.js" ></script>
 		<script src="Enigme_prison.js"></script> 
-		<script src="stopwatch.js"></script>
+
 	</body>
 </html>

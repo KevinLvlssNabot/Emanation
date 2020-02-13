@@ -1,0 +1,95 @@
+body{
+  background-image: url(assets/enigme_prison/prison.png);
+  background-repeat: no-repeat;
+  background-size: 800px 600px;
+  background-position: center;
+  width: 800px;
+  height: 600px;
+  border-style: solid;
+  border-width: thin;
+  margin: auto;
+}
+
+#tour1{
+  background-image: url(assets/enigme_prison/tour.png);
+  width:60px;
+  height: 350px;
+  transform: scale(0.80);
+  margin-right: 100px;
+  margin-left: 100px;
+  position: absolute;
+  left:25px ;
+  top:286px ;
+}
+
+
+#tour2{
+  background-image: url(assets/enigme_prison/tour.png);
+  width:60px;
+  height: 350px;
+  transform: scale(0.80);
+  margin-right: 100px;
+  margin-left: 100px;
+  position: absolute;
+  left:350px ;
+  top:286px ;
+}
+
+#tour3{
+  background-image: url(assets/enigme_prison/tour.png);
+  width:60px;
+  height: 350px;
+  transform: scale(0.80);
+  margin-right: 100px;
+  margin-left: 100px;
+  position: absolute;
+  left:600px ;
+  top:286px ;
+}
+
+.vide{
+  position: relative;
+  right:122px;
+  top:170px;
+  width: 316px;
+  height:36px;
+
+}
+#discB{
+  background-image: url(assets/enigme_prison/disque_bleu.png);
+  background-repeat: no-repeat;
+  width:316px;
+  height:36px;
+}
+
+#discJ{
+  background-image: url(assets/enigme_prison/disque_jaune.png);
+  background-repeat: no-repeat;
+  margin: auto;
+  width:261px;
+  height:36px;
+}
+
+#discV{
+  background-image: url(assets/enigme_prison/disque_vert.png);
+  background-repeat: no-repeat;
+  margin: auto;
+  width:210px;
+  height:36px;
+}
+
+#discVio{
+  background-image: url(assets/enigme_prison/disque_violet.png);
+  background-repeat: no-repeat;
+  margin: auto;
+  width:160px;
+  height:36px;
+}
+
+#discR{
+  background-image: url(assets/enigme_prison/disque_rouge.png);
+  background-repeat: no-repeat;
+  margin: auto;
+  width:126px;
+  height:36px;
+}
